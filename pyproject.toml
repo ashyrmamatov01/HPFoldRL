@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hp_problem"
+version = "0.1.0"
+description = "HP-lattice environments for RL benchmarks"
+authors = [{name = "Islambek Ashyrmamatov"}]
+dependencies = [
+    "gymnasium>=0.29",
+    "matplotlib==3.9.0",
+    "numpy>=1.25",
+    "torch==2.6.0",
+    "pandas>=2.0",
+    "tqdm>=4.65",
+    "seaborn>=0.12",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

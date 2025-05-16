@@ -1,0 +1,29 @@
+# Ignore Python cache
+**/__pycache__/**
+*.py[cod]
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/** 
+*.ipynb
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore git repo itself
+*.git/*
+.pytest_cache/**
+**/*cache*/*
+
+# custom ignore
+*.png
+**/backups/* 
+**/runs/**
+./backups/*
+./runs/*
+/runs/
+Attn_DQN_3d_hp.py
+src.zip
