@@ -20,6 +20,14 @@ Thumbs.db
 
 # custom ignore
 *.png
+*.csv
+*.json
+*.txt
+*.zip
+*.pkl
+*.pt
+*.excalidraw
+events*
 **/backups/* 
 **/runs/**
 ./backups/*
