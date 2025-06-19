@@ -68,7 +68,7 @@ def main(args) -> None:
     # prepare CSV logging
     csv_path = out_dir / "training_log.csv"
     csv_file = csv_path.open("w", newline="")
-    csv_writer = csv.DictWriter(csv_file, fieldnames=["episode", "Reward", "Energy", "epsilon"])
+    csv_writer = csv.DictWriter(csv_file, fieldnames=["episode", "Reward", "Energy", "epsilon", "TimeStamp"])
     csv_writer.writeheader()
 
     # handle SIGINT for graceful exit
@@ -105,7 +105,7 @@ def main(args) -> None:
                 writer.add_scalar("Train/Loss", loss, ep)
 
             # CSV logging
-            row = {"episode": ep, "Reward": ep_reward, "Energy": phys_E, "epsilon": agent._epsilon()}
+            row = {"episode": ep, "Reward": ep_reward, "Energy": phys_E, "epsilon": agent._epsilon(), "TimeStamp": datetime.datetime.now().isoformat()}
             csv_writer.writerow(row)
             csv_file.flush()
             episode_log.append(row)
